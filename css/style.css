@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #444;
+    height: 50px;
+}
+
+nav.logo {
+    float: left;
+    
+    padding: 10px;
+}
+
+nav.logo img {
+    height: 40px;
+    width: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    float: right;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: tan;
+}
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav.logo {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        float: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav.logo img {
+        height: 30px;
+    }
+    nav li a {
+        padding: 10px 12px;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+    
+}
+
+.hero {
+    background-image: url('./../images/background-home.jpg') ;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #444;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+         height: 80vh;
+     }
+    .hero h1 {
+         font-size: 2rem;
+     }
+    .hero p {
+         font-size: 1.2rem;
+     }
+ }
+ 
+ @media screen and (max-width: 480px) {
+    .hero {
+         height: 60vh;
+     }
+    .hero h1 {
+         font-size: 1.5rem;
+     }
+    .hero p {
+         font-size: 1rem;
+     }
+ }
+
+
+
+

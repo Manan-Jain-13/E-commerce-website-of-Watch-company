@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #444;
+    height: 50px;
+}
+
+nav.logo {
+    float: left;
+    
+    padding: 10px;
+}
+
+nav.logo img {
+    height: 40px;
+    width: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    float: right;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: tan;
+}
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav.logo {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        float: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav.logo img {
+        height: 30px;
+    }
+    nav li a {
+        padding: 10px 12px;
+    }
+    
+    
+}
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin:  auto;
+}
+
+.heading h1{
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: tan;
+}
+
+
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*padding: 40px;*/
+}
+.shop h1{
+    text-align: center;
+    font-size: 2.5rem;
+    text-decoration:underline;
+}
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+   width: 350px;
+   height: 350px;
+
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.card img {
+    width: 50%;
+    height: 50%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.card button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: tan;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+        width: calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+        width: 100%;
+    }
+}
